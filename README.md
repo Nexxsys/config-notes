@@ -94,3 +94,9 @@ sudo apt install kali-desktop-kde
 # Breaks Debian KDE if done alone need to do the step above
 sudo apt install kali-linux-headless kali-tools-exploitation kali-tools-forensics kali-tools-fuzzing kali-tools-information-gathering kali-tools-passwords kali-tools-post-exploitation kali-tools-sniffing-spoofing kali-tools-top10 kali-tools-web
 ```
+
+
+## Install Fonts - Eye Candy
+1. Create a folder : `~/.local/share/fonts`  for all users `/usr/local/share/fonts`
+2. Copy Fonts to this folder `Use rsync -a <src> ~/.local/share/fonts to copy the files over`
+3. Rebuild the font cache: `fc-cache -f -v`
