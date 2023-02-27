@@ -35,10 +35,18 @@ Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your
 
 Oh-my-zsh plugins
 ```shell
-plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver zsh-syntax-highlighting)
+plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
 ```
-To install the plugin for zsh-autosuggestions you need to navigate to the `~/.oh-my-zsh/custom/plugins` folder the clone the repo `git clone https://github.com/zsh-users/zsh-autosuggestions'.   
+To install the plugin for zsh-autosuggestions you need to navigate to the `~/.oh-my-zsh/custom/plugins` folder the clone the repo `git clone https://github.com/zsh-users/zsh-autosuggestions`.   
 
+Install the ZSH syntax highlighting
+```shell
+sudo apt install zsh-syntax-hightlighting
+```
+Add this line to your `zshrc` file
+```shell
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
 
 ### Installing Kali Repos on another distro
 #### Setup
