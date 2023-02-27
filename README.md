@@ -37,6 +37,10 @@ Oh-my-zsh plugins
 ```shell
 plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
 ```
+May need to install the zsh-pentest plugin
+```shell
+git clone https://github.com/jhwohlgemuth/zsh-pentest.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-pentest
+```
 To install the plugin for zsh-autosuggestions you need to navigate to the `~/.oh-my-zsh/custom/plugins` folder the clone the repo `git clone https://github.com/zsh-users/zsh-autosuggestions`.   
 
 Install the ZSH syntax highlighting
