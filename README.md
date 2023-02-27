@@ -26,12 +26,14 @@ After system restart Obsidian showed up in the application launcher.
 * Install Powerline10k (optional) https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
 
-Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your terminal prompt
+Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your terminal prompt as well search for this line `typeset -g POWERLEVEL9K_VPN_IP_CONTENT_EXPANSION=' and comment it out
 
 Oh-my-zsh plugins
 ```shell
 plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
 ```
+To install the plugin for zsh-autosuggestions you need to navigate to the `~/.oh-my-zsh/custom/plugins` folder the clone the repo `git clone https://github.com/zsh-users/zsh-autosuggestions`.   
+
 
 ### Installing Kali Repos on another distro
 #### Setup
