@@ -20,8 +20,10 @@ After system restart Obsidian showed up in the application launcher.
 
 
 ## Oh-my-zsh & Powerlevel10k
-*Install LSD*
-LSD (colorizes you permissions): https://github.com/Peltoche/lsd
+
+* LSD (colorizes you permissions): https://github.com/Peltoche/lsd
+* Install Oh-My-ZSH https://ohmyz.sh/
+* Install Powerline10k (optional) https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 
 
 Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your terminal prompt
@@ -29,4 +31,66 @@ Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your
 Oh-my-zsh plugins
 ```shell
 plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
+```
+
+### Installing Kali Repos on another distro
+#### Setup
+Ensure you have the su access
+```shell
+sudo passwd
+```
+
+Set a su password
+
+Enter the password you just setup
+
+Add the repo to the sources.list
+
+Link: https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+
+```shell
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list
+```
+
+Now perform an apt update and you will get an error (example):
+```shell
+# you will get an error but you need to pull the key value
+sudo apt update
+
+Hit:13 http://apt.pop-os.org/ubuntu jammy-backports InRelease
+Get:11 http://kali.download/kali kali-rolling InRelease [30.6 kB]
+Err:11 http://kali.download/kali kali-rolling InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY ED444FF07D8D0BF6
+Reading package lists... Done
+
+```
+
+Now switch to root
+
+```shell
+# use the password you set up above
+sudo root
+```
+
+Now execute this as root
+```shell
+gpg --keyserver keyserver.ubuntu.com --recv-key ED444FF07D8D0BF6
+```
+
+
+```shell
+gpg -a --export ED444FF07D8D0BF6 | apt-key add -
+```
+
+
+Link to Repo's and batch tool installs: https://www.kali.org/tools/kali-meta/
+https://www.kali.org/docs/general-use/metapackages/
+
+```shell
+# May Be Required
+sudo apt install -f libgs-common
+sudo apt install kali-desktop-kde
+
+# Breaks Debian KDE if done alone need to do the step above
+sudo apt install kali-linux-headless kali-tools-exploitation kali-tools-forensics kali-tools-fuzzing kali-tools-information-gathering kali-tools-passwords kali-tools-post-exploitation kali-tools-sniffing-spoofing kali-tools-top10 kali-tools-web
 ```
