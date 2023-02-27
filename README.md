@@ -8,9 +8,12 @@ Better method: https://help.obsidian.md/Getting+started/Download+and+install+Obs
 Use Flatpak
 1.  Install flatpak `sudo apt install flatpak`
 2.  Check version to make sure it is installed `flatpak --version`
-3.  Enable Flathub to search apps from command line `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+3.  Enable Flathub to search apps from command line `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
 4.  Search is done by `flatpak search <app_name>`
 5.  Check the Application ID and run the installation with the application ID. I found it easier than choosing the right name. `flatpak install <app-id>`
+6. `flatpak install flathub md.obsidian.Obsidian`
+
+(If you want to remove Flathub entry) `flatpak remote-delete flathub`
 
 Then I went on to look for Obsidian from Flathub.
 
