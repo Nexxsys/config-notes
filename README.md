@@ -35,7 +35,7 @@ Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your
 
 Oh-my-zsh plugins
 ```shell
-plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
+plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver zsh-syntax-highlighting)
 ```
 To install the plugin for zsh-autosuggestions you need to navigate to the `~/.oh-my-zsh/custom/plugins` folder the clone the repo `git clone https://github.com/zsh-users/zsh-autosuggestions'.   
 
