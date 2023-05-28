@@ -53,8 +53,8 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 ----
 
-### Installing Kali Repos on another distro
-#### Setup
+## Installing Kali Repos on another distro
+### Setup
 Ensure you have the su access
 ```shell
 sudo passwd
