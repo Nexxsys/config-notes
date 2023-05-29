@@ -18,6 +18,7 @@ packages=(
     terminator
     cifs-utils
     byobu
+    gparted
 )
 
 # Update package lists
