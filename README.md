@@ -35,7 +35,7 @@ Edit the .p10k.zsh file and uncomment vpn_ip to include this information in your
 
 Oh-my-zsh plugins
 ```shell
-plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver)
+plugins=(git nmap copypath zsh-pentest web-search zsh-autosuggestions quiver colorize)
 ```
 May need to install the zsh-pentest plugin
 ```shell
